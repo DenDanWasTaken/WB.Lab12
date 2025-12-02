@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="author" content="Фільшин Едуард">
+  <meta name="description" content="Лабораторна робота №12 з веб-розробки. Виконана Фільшиним Едуардом.">
+  <meta name="keywords" content="веб-розробка, bootstrap, лабораторна робота, адаптивний дизайн, JavaScript">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Фільшин Едуард</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+
+</head>
+
+<body>
+  <script>
+    "use strict";
+    let me = {
+      name: "Ed",
+      age: 18,
+      group: "PP-25",
+      hobby: "Programming"
+    };
+
+    document.write("<h3>Властивості об'єкта me:</h3>");
+
+    for (let key in me) {
+      let info = key + " — " + me[key];
+      document.write(info + "<br>");
+    }
+  </script>
+</body>
+
+</html>

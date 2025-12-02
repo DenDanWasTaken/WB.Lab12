@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="author" content="Фільшин Едуард">
+  <meta name="description" content="Лабораторна робота №12 з веб-розробки. Виконана Фільшиним Едуардом.">
+  <meta name="keywords" content="веб-розробка, bootstrap, лабораторна робота, адаптивний дизайн, JavaScript">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Фільшин Едуард</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+
+</head>
+
+<body>
+  <script>
+    "use strict";
+    //Приклад знаходження найменшого серед п'яти чисел
+
+    document.write("<p style='text-align:center'>Приклад знаходження найменшого числа</p>");
+    let a = 5314; let b = 2349; let c = 8123; let d = 1234; let e = 9876;
+
+    if (a < b && a < c && a < d && a < e) document.write("Найменше серед трьох чисел - a=", a);
+    else if (b < a && b < c && b < d && b < e) document.write("Найменше серед трьох чисел - b=", b);
+    else if (c < a && c < b && c < d && c < e) document.write("Найменше серед трьох чисел - c=", c);
+    else if (d < a && d < b && d < c && d < e) document.write("Найменше серед трьох чисел - d=", d);
+    else document.write("Найменше серед трьох чисел - e=", e);
+
+
+    let min = a;
+    if (b < min) min = b;
+    if (c < min) min = c;
+    if (d < min) min = d;
+    if (e < min) min = e;
+    document.write("<p>Значення найменшого серед трьох чисел - ", min);
+
+    //Приклад підрахунку кількості чисел більших за 5000 серед п'яти
+    document.write("<p style='text-align:center'>Приклад підрахунку кількості чисел більших за 5000 серед п'яти заданих</p>");
+    let biggerThan5000 = (a > 5000 ? 1 : 0) + (b > 5000 ? 1 : 0) + (c > 5000 ? 1 : 0) + (d > 5000 ? 1 : 0) + (e > 5000 ? 1 : 0);
+    document.write("<p>Кількість чисел більших за 5000: ", biggerThan5000);
+  </script>
+</body>
+
+</html>

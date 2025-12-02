@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="author" content="Фільшин Едуард">
+  <meta name="description" content="Лабораторна робота №12 з веб-розробки. Виконана Фільшиним Едуардом.">
+  <meta name="keywords" content="веб-розробка, bootstrap, лабораторна робота, адаптивний дизайн, JavaScript">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Фільшин Едуард</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+
+</head>
+
+<body>
+  <script>
+    "use strict";
+
+    // Список можливих слів
+    const words = ["кіт", "собака", "сонце", "дерево", "молоко", "любов", "дружба", "сім'я", "вода", "книга"];
+    // Вибір випадкового слова
+    let secret = words[Math.floor(Math.random() * words.length)];
+
+    let revealed = ""; // частково відкрите слово
+    let attempts = 0;  // кількість спроб
+    let playing = true;
+
+    let answer = confirm("Хочеш зіграти у вгадування слова?");
+
+    if (answer) {
+      while (playing) {
+        attempts++;
+
+        revealed = secret.substring(0, attempts);
+
+        let guess = prompt(
+          "Спробуй вгадати слово!\n" +
+          "Відкриті літери: " + revealed + "\n" +
+          "Спроба №" + attempts
+        );
+
+        if (guess === null) {
+          alert("Ви вийшли з гри.");
+          playing = false;
+        }
+        else if (guess.toLowerCase() === secret) {
+          alert("Правильно! Слово було: " + secret +
+            "\nСпроб: " + attempts);
+          playing = false;
+        }
+        else {
+          if (attempts === secret.length - 1) {
+            alert("Більше підказок немає!\n" +
+              "Слово було: " + secret);
+            playing = false;
+          } else {
+            alert("Неправильно. Спробуй ще!");
+          }
+        }
+      }
+    } else {
+      alert("Добре! Може наступного разу?");
+    }
+
+  </script>
+</body>
+
+</html>
